@@ -61,7 +61,7 @@ jobs:
             -Dsonar.javascript.coveragePlugin=lcov
             -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
             -Dsonar.javascript.lcov.reportPaths=./coverage/lcov.info
-            -Dsonar.sources=./src
+            -Dsonar.sources=src/
 
             # When you need the analysis to take place in a directory other than the one from which it was launched
             #-Dsonar.projectBaseDir= # optional, default is .
