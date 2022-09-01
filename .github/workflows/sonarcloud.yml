@@ -43,7 +43,8 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Analyze with SonarCloud         
+      - uses: actions/checkout@v3
+      - name: Analyze with SonarCloud      
 
         # You can pin the exact commit or the version.
         # uses: SonarSource/sonarcloud-github-action@de2e56b42aa84d0b1c5b622644ac17e505c9a049
@@ -61,7 +62,7 @@ jobs:
             -Dsonar.javascript.coveragePlugin=lcov
             -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
             -Dsonar.javascript.lcov.reportPaths=./coverage/lcov.info
-            -Dsonar.sources=${{ github.workspace }}/src
+            -Dsonar.sources=src
 
             # When you need the analysis to take place in a directory other than the one from which it was launched
             #-Dsonar.projectBaseDir= # optional, default is .
